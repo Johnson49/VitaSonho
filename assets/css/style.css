@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.logo{
+    cursor: pointer;
+    border: 1px solid rgba(77, 76, 76, 0.61);
+    color: #272525;
+    padding: 4px 15px;
+    letter-spacing: 4px;
+    font-size: 20px;
+    font-weight: 300;
+}
