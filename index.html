@@ -5,22 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VitaSonho</title>
-
+    <meta name="description" content="Site de reservas de hotéis.">
+    <link rel="shortcut icon" href="./assets/img/faticon.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/tailwind.css" />
   </head>
   <body class="bg-gray-50 text-gray-600">
     <!-- Header -->
     <div>
       <div
-        class="container mx-auto px-4 h-20 flex items-center justify-between"
+        class="container max-w-5xl mx-auto px-4 h-20 flex items-center justify-between"
       >
         <div class="logo">VitaSonho</div>
 
-        <ul class="flex items-center space-x-4 ml-auto">
+        <ul class="flex mobile items-center space-x-4 ml-auto">
           <li>
             <a
               href="#"
-              class="text-sm text-gray-600 hover:text-gray-800 hover:underline"
+              class="text-sm  text-gray-600 hover:text-gray-800 hover:underline"
               >Como reservar</a
             >
           </li>
@@ -51,13 +52,17 @@
 
     <!-- Home banner -->
     <div
-      style="
-        background-image: url('./assets/img/hero-image-1.png');
-        height: 450px;
-      "
+        class="max-w-5xl mx-auto"
+        style="
+            background-image: url('./assets/img/hero-image-1.png');
+            height: 450px;
+            background-repeat: no-repeat;
+            background-position: left;
+            background-size: cover;
+            "
     >
       <div
-        class="container mx-auto px-4 h-full flex items-center justify-center flex-col"
+        class="container max-w-5xl mx-auto px-4 h-full flex items-center justify-center flex-col"
       >
         <div class="text-center">
           <h1 class="text-gray-200 text-3xl mb-1">Onde você quer ir?</h1>
@@ -67,7 +72,7 @@
         </div>
 
         <div class="mt-7">
-          <form class="space-x-4">
+          <form class="grid grid-cols-2 lg:grid-cols-3 gap-4">
             <select
               class="bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500"
             >
@@ -85,7 +90,7 @@
             </select>
 
             <button
-              class="inline-flex cursor-pointer items-center text-black bg-yellow-400 px-3 py-2 rounded"
+              class="col-span-2 lg:col-span-1 inline-flex justify-center cursor-pointer items-center text-black bg-yellow-400 px-3 py-2 rounded"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -112,9 +117,9 @@
     <!-- Painel de destaque -->
 
     <div>
-      <div class="container mx-auto px-4 py-20">
-        <div class="flex">
-          <div class="pr-10">
+      <div class="container max-w-5xl mx-auto px-4 py-20  sm:pt-5">
+        <div class="flex flex-col-reverse lg:flex-row">
+          <div class="lg:pr-10">
             <div class="text-sm uppercase text-gray-400 font-medium">
               resort em destaque
             </div>
@@ -161,7 +166,7 @@
               </a>
             </div>
           </div>
-          <div class="flex-shrink-0 ml-auto">
+          <div class="flex-shrink-0 lg:ml-auto flex justify-center mb-5 lg:mb-0">
             <img src="./assets/img/featured-img.png" width="400" />
           </div>
         </div>
@@ -170,14 +175,14 @@
 
     <!-- galeria  de fotos -->
     <div>
-      <div class="container mx-auto px-4">
+      <div class="container max-w-5xl mx-auto px-4">
         <div>
           <h3 class="text-2xl text-center text-gray-500 font-semibold mb-8">
             Conheça mais resorts
           </h3>
-          <div class="grid grid-cols-4 grid-rows-2 gap-6">
+          <div class="md:grid md:grid-cols-4 md:grid-rows-2 md:gap-6 space-y-6 md:space-y-0">
             <div
-              class="relative col-span-2 row-span-2 rounded-md overflow-hidden"
+              class="relative md:col-span-2 md:row-span-2 rounded-md overflow-hidden"
             >
               <div
                 class="absolute bottom-0 pl-4 pb-4 text-white font-semibold z-20"
@@ -193,7 +198,7 @@
                 class="w-full h-full object-cover"
               />
             </div>
-            <div class="relative col-span-2 h-40 rounded-md overflow-hidden">
+            <div class="relative md:col-span-2 md:h-40 rounded-md overflow-hidden">
               <div
                 class="absolute bottom-0 pl-4 pb-4 text-white font-semibold z-20"
               >
@@ -246,55 +251,55 @@
     <!-- formulário de pesquisa -->
     <div>
       <div
-        class="container mx-auto px-4 py-20 flex items-center justify-center"
+        class="container max-w-5xl mx-auto px-4 py-20 flex items-center justify-center"
       >
-        <form class="space-x-4">
-          <select
-            class="bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500"
-          >
-            <option value="" disabled="disabled" selected>
-              Escolha seu estado
-            </option>
-          </select>
+      <form class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+        <select
+          class="bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500"
+        >
+          <option value="" disabled="disabled" selected>
+            Escolha seu estado
+          </option>
+        </select>
 
-          <select
-            class="bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500"
-          >
-            <option value="" disabled="disabled" selected>
-              Escolha a cidade
-            </option>
-          </select>
+        <select
+          class="bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500"
+        >
+          <option value="" disabled="disabled" selected>
+            Escolha a cidade
+          </option>
+        </select>
 
-          <button
-            class="inline-flex cursor-pointer items-center text-black bg-yellow-400 px-3 py-2 rounded"
+        <button
+          class="col-span-2 lg:col-span-1 inline-flex justify-center cursor-pointer items-center text-black bg-yellow-400 px-3 py-2 rounded"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-4 h-4 mr-2"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-4 h-4 mr-2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-              />
-            </svg>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
 
-            Pesquisar resorts
-          </button>
-        </form>
+          Pesquisar resorts
+        </button>
+      </form>
       </div>
     </div>
     <!-- rodapé -->
 
-    <footer class="border-t border-gray-200">
+    <footer class="border-t max-w-5xl mx-auto border-gray-200">
       <div
-        class="container mx-auto px-10 py-6 flex items-center justify-between"
+        class="container max-w-5xl mx-auto px-4 py-3 flex items-center justify-between"
       >
-        <div class="logo">VitaSonho</div>
+        <div class="logo" style="display: block; font-size: 14px; color: #000000">VitaSonho</div>
         <div class="flex items-center space-x-4">
           <a href="#">
             <img src="./assets/img/icon-facebook.png" />
