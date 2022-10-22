@@ -19,6 +19,12 @@
         
     }
 
+    .logoFooter{
+        display: block !important;
+        color: black;
+        font-size: 13px;
+        
+    }
     .mobile{
         margin: auto;        
     }
